@@ -25,7 +25,11 @@ Route::get('/', function () {
     ]);
 });
 
-Route::get('/home', [PostController::class, 'index']);
+Route::get('/home', [PostController::class, 'index'])->name('home');
+
+Route::get('/sobre', function () {
+    return Inertia::render('Sobre');
+})->name('sobre');
 
 Route::middleware([
     'auth:sanctum',

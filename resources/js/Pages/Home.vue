@@ -1,12 +1,12 @@
 <template>
     <div>
-        <h1>
-            Home Page
-        </h1>
         <p>
             Bem vindo!
         </p>
     </div>
+
+    <MenuNavBar></MenuNavBar>
+
     <div>
         <div class="p-4">
             <div class="bg-white p-4 rounded-md">
@@ -48,8 +48,13 @@
 </template>
 
 <script>
+import MenuNavBar from '../Components/MenuNavBar.vue';
 export default {
     name: 'Home',
+    components: {
+        MenuNavBar,
+        MenuNavBar
+    },
     props: {
         posts: Object,
     },
