@@ -5,16 +5,8 @@
     </div>
 </template>
 
-<script>
+<script setup>
 import { Link } from '@inertiajs/vue3';
-
-export default {
-    name: 'MenuNavBar',
-    components: {
-        Link
-    },
-}
-
 </script>
 
 <style lang="css" scoped></style>

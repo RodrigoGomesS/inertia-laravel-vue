@@ -1,4 +1,5 @@
 <template>
+    <Head :title="title" />
     <header>
         <MenuNavBar />
     </header>
@@ -7,11 +8,12 @@
     </main>
 </template>
 
-<script>
+<script setup>
+import { Head } from '@inertiajs/vue3';
 import MenuNavBar from '../Components/MenuNavBar.vue';
-export default {
-    components: {
-        MenuNavBar
-    },
-}
+
+defineProps({
+    title: String,
+});
+
 </script>

@@ -1,19 +1,13 @@
 <template>
-    <CustomLayout>
+    <CustomLayout title="Sobre">
         <div>
             Projeto de inertia e laravel
         </div>
     </CustomLayout>
 </template>
 
-<script>
+<script setup>
 import CustomLayout from '../Layouts/CustomLayout.vue';
-export default {
-    name: 'Sobre',
-    components: {
-        CustomLayout,
-    },
-}
 
 </script>
 

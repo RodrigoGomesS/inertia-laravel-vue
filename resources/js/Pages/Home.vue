@@ -1,5 +1,5 @@
 <template>
-    <CustomLayout>
+    <CustomLayout title="Home">
         <div>
             <div class="p-4">
                 <div class="bg-white p-4 rounded-md">
@@ -41,17 +41,11 @@
     </CustomLayout>
 </template>
 
-<script>
+<script setup>
 import CustomLayout from '../Layouts/CustomLayout.vue';
-export default {
-    name: 'Home',
-    components: {
-        CustomLayout,
-    },
-    props: {
-        posts: Object,
-    },
-}
+defineProps({
+    posts: Object,
+});
 </script>
 
 <style lang="css" scoped></style>
