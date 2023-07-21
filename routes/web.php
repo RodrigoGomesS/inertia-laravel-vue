@@ -25,12 +25,6 @@ Route::get('/', function () {
     ]);
 });
 
-Route::get('/home', [PostController::class, 'index'])->name('home');
-
-Route::get('/sobre', function () {
-    return Inertia::render('Sobre');
-})->name('sobre');
-
 Route::middleware([
     'auth:sanctum',
     config('jetstream.auth_session'),
@@ -39,4 +33,10 @@ Route::middleware([
     Route::get('/dashboard', function () {
         return Inertia::render('Dashboard');
     })->name('dashboard');
+    
+    Route::get('/home', [PostController::class, 'index'])->name('home');
+
+    Route::get('/sobre', function () {
+        return Inertia::render('Sobre');
+    })->name('sobre');
 });
