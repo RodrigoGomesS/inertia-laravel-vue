@@ -1,7 +1,24 @@
+<script setup>
+import AppLayout from '@/Layouts/AppLayout.vue';
+import Welcome from '@/Components/Welcome.vue';
+
+defineProps({
+    posts: Object,
+});
+</script>
+
 <template>
-    <CustomLayout title="Home">
-        <div>
-            <div class="p-4">
+    <AppLayout title="Dashboard">
+        <template #header>
+            <h2 class="font-semibold text-xl text-gray-800 leading-tight">
+                Home
+            </h2>
+        </template>
+
+        <div class="py-12">
+            <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
+                <div class="bg-white overflow-hidden shadow-xl sm:rounded-lg">
+                    <div class="p-4">
                 <div class="bg-white p-4 rounded-md">
                     <div>
                         <h2 class="mb-4 text-xl font-bold text-gray-700">Posts</h2>
@@ -37,15 +54,10 @@
                     </div>
                 </div>
             </div>
+                </div>
+            </div>
         </div>
-    </CustomLayout>
+    </AppLayout>
 </template>
-
-<script setup>
-import CustomLayout from '../Layouts/CustomLayout.vue';
-defineProps({
-    posts: Object,
-});
-</script>
 
 <style lang="css" scoped></style>
