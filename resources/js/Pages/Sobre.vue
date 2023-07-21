@@ -1,16 +1,17 @@
 <template>
-    <div>
-        Projeto de inertia e laravel
-    </div>
-    <MenuNavBar />
+    <CustomLayout>
+        <div>
+            Projeto de inertia e laravel
+        </div>
+    </CustomLayout>
 </template>
 
 <script>
-import MenuNavBar from '../Components/MenuNavBar.vue';
+import CustomLayout from '../Layouts/CustomLayout.vue';
 export default {
     name: 'Sobre',
     components: {
-        MenuNavBar,
+        CustomLayout,
     },
 }
 

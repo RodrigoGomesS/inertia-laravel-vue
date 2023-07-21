@@ -1,7 +1,7 @@
 <template>
-    <div>
-        <Link :href="route('home')">Home</Link>
-        <Link :href="route('sobre')">Sobre</Link>
+    <div class="bg-gradient-to-tr from-indigo-600 to-purple-600 text-white">
+        <Link class="py-2 px-3" :class="{ 'font-bold': $page.url === '/home' }" :href="route('home')">Home</Link>
+        <Link class="py-2 px-3" :class="{ 'font-bold': $page.url === '/sobre' }" :href="route('sobre')">Sobre</Link>
     </div>
 </template>
 
